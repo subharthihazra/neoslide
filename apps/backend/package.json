@@ -4,12 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint . --ext .ts"
   },
   "dependencies": {
-    "shared": "workspace:*"
+    "@repo/shared": "*",
+    "express": "^4.21.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.4",
+    "eslint": "^9.11.1",
+    "nodemon": "^3.1.7",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2"
+  }
 }
